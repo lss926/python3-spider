@@ -4,5 +4,6 @@ python3爬虫学习项目记录
 
 ## 目录
 
-* maoyan.py:爬取猫眼电影排行榜
-* meitu.py:爬取今日头条街拍美图
+* maoyan.py: 爬取猫眼电影排行榜
+* meitu.py: 爬取今日头条街拍美图
+* tencent 采用scrapy爬取腾讯招聘职位
