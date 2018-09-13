@@ -43,14 +43,15 @@ class MeiTuSpider(object):
         if json.get('data'):
             data = json.get('data')
             for item in data:
-                if 'open_url' in item:
-                    title = item.get('title')
-                    images = item.get('image_list')
-                    for image in images:
-                        yield{
-                            'image':'https:' + image.get('url'),
-                            'title':title
-                        }
+                if item.get('cell_type') is not None:
+                    continue
+                title = item.get('title')
+                images = item.get('image_list')
+                for image in images:
+                    yield{
+                        'image':'https:' + image.get('url'),
+                        'title':title
+                    }
 
     def save_image(self, item):
         '''将图片保存在文件夹中，文件夹以title命名'''
